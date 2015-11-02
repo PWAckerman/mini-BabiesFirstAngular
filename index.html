@@ -11,9 +11,10 @@
       <div class="centerbox">
     <section ng-controller="mainCtrl as main">
       <span>My name is <strong>{{name}}</strong></span>
-        <div ng-repeat="friend in friends track by $index"><div class='box'><img class="icon" src="https://drslash.com/wp-content/uploads/2014/07/Neutron.png" /><span>{{friend.name}}</span></br><span>{{friend.age}}</span></br><span>{{friend.birthplace}}</span></br>
+        <div ng-repeat="friend in friends track by $index"><div class='box'><img class="icon" src="https://drslash.com/wp-content/uploads/2014/07/Neutron.png" /><span>{{friend.name}}</span></br><span>{{friend.age}}</span></br><span>{{friend.birthplace}}</span></br><strong>New Name: &nbsp;</strong><span class="new-name">{{name}}</span>
         <div></div></div></div>
           <input type='text' ng-model="name"/>
+          <span>New Friend:</span><input ng-model="newFriendInput"/><button ng-click='addFriend(newFriendInput)'>Add</button>
     </section>
   </div>
   </div>

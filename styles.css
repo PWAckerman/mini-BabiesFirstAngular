@@ -1,7 +1,13 @@
+body {
+  background-color: rgb(61, 96, 113);
+}
+
+
 .container{
   width: 100%;
   height: auto;
   text-align: center;
+  margin-top: 10px;
 }
 
 .centerbox{
@@ -11,16 +17,26 @@
 .box{
   width: 300px;
   height: auto;
-  background-color: rgb(179, 179, 179);
+  background-color: rgb(73, 105, 111);
+  border: 1px solid rgb(124, 140, 143);
   margin: 10px;
   padding: 10px;
   border-radius: 10px;
   color: white;
   text-align: left;
   display: inline-block;
-
+  transition: .5s;
 }
 
+.box:hover{
+  background-color: rgb(97, 142, 150);
+  transition: 1s;
+  border: 1px solid rgb(97, 142, 150);
+}
+
+.new-name{
+  color: rgb(186, 170, 196);
+}
 .icon{
   width: 60px;
   height: 60px;
