@@ -6,17 +6,17 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" type="text/css" rel="stylesheet"/>
     <link href="styles.css" type="text/css" rel="stylesheet"/>
   </head>
-  <body ng-app="friendsList">
-    <div class='container'>
+  <body ng-app="friendsList" ng-controller="mainCtrl as main">
+    <div class='container' >
+      <div class="centerbox" style="text-align: left; float: right; margin-right: 100px;">
+        <strong>New Name</strong>:&nbsp;<input type='text' ng-model="name"/></br>
+        <span>New Friend: &nbsp;</span><input ng-model="newFriendInput"/><button ng-click='addFriend(newFriendInput)'>Add</button>
+      </div>
       <div class="centerbox">
-    <section ng-controller="mainCtrl as main">
       <span>My name is <strong>{{name}}</strong></span>
         <div ng-repeat="friend in friends track by $index"><div class='box'><img class="icon" src="https://drslash.com/wp-content/uploads/2014/07/Neutron.png" /><span>{{friend.name}}</span></br><span>{{friend.age}}</span></br><span>{{friend.birthplace}}</span></br><strong>New Name: &nbsp;</strong><span class="new-name">{{name}}</span>
         <div></div></div></div>
-          <input type='text' ng-model="name"/>
-          <span>New Friend:</span><input ng-model="newFriendInput"/><button ng-click='addFriend(newFriendInput)'>Add</button>
-    </section>
-  </div>
+      </div>
   </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
     <script src="app.js"></script>
